@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Honey Special Cake HSR | Custom Cakes & Bakery in HSR Layout, Bengaluru</title>
+  <meta name="description" content="Honey Special Cake HSR — 4.7★ rated cake shop in HSR Layout, Bengaluru. Custom cakes, pastries, burgers & more. Open daily 10 AM – 11:30 PM. Call: +91 91431 43931" />
+  <meta property="og:title" content="Honey Special Cake HSR | Cake Shop in HSR Layout, Bengaluru" />
+  <meta property="og:description" content="Handcrafted custom cakes, pastries & late-night treats in HSR Layout. 4.7★ with 654+ reviews. Open till 11:30 PM." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1200&q=80" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --gold: #D4A017;
+      --gold-light: #F5E6B8;
+      --brown: #3B1F0C;
+      --brown-light: #6B3A1F;
+      --cream: #FFF8E7;
+      --cream-dark: #F5ECD0;
+      --text: #2C1810;
+      --text-light: #7A5C44;
+      --white: #FFFFFF;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--cream); }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 1000;
+      background: rgba(59,31,12,0.95); backdrop-filter: blur(10px);
+      padding: 0.9rem 2rem; display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo { color: var(--gold); font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; text-decoration: none; }
+    .nav-links { display: flex; gap: 1.8rem; list-style: none; }
+    .nav-links a { color: var(--cream); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta { background: var(--gold); color: var(--brown); padding: 0.5rem 1.2rem; border-radius: 25px; font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: all .2s; }
+    .nav-cta:hover { background: var(--cream); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { width: 24px; height: 2px; background: var(--cream); border-radius: 2px; transition: .3s; }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh; position: relative; display: flex; align-items: center; justify-content: center; text-align: center;
+      background: linear-gradient(135deg, rgba(59,31,12,0.88) 0%, rgba(107,58,31,0.80) 100%),
+                  url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1600&q=80') center/cover no-repeat;
+    }
+    .hero-content { max-width: 700px; padding: 2rem; position: relative; z-index: 1; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(212,160,23,0.2); border: 1px solid var(--gold); color: var(--gold); padding: 0.4rem 1rem; border-radius: 25px; font-size: 0.82rem; font-weight: 600; margin-bottom: 1.2rem; }
+    .hero h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); color: var(--white); line-height: 1.2; margin-bottom: 1rem; }
+    .hero h1 span { color: var(--gold); }
+    .hero-sub { color: rgba(255,255,255,0.85); font-size: 1.05rem; margin-bottom: 2rem; line-height: 1.6; }
+    .hero-meta { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 2rem; flex-wrap: wrap; }
+    .hero-meta span { color: rgba(255,255,255,0.75); font-size: 0.85rem; display: flex; align-items: center; gap: 0.3rem; }
+    .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-primary { background: var(--gold); color: var(--brown); padding: 0.9rem 2rem; border-radius: 30px; text-decoration: none; font-weight: 700; font-size: 0.95rem; transition: all .2s; display: inline-flex; align-items: center; gap: 0.4rem; }
+    .btn-primary:hover { background: var(--cream); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(212,160,23,0.4); }
+    .btn-outline { background: transparent; color: var(--white); padding: 0.9rem 2rem; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 0.95rem; border: 2px solid rgba(255,255,255,0.5); transition: all .2s; }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* SECTIONS */
+    section { padding: 4.5rem 1.5rem; }
+    .section-title { text-align: center; margin-bottom: 2.5rem; }
+    .section-title h2 { font-size: clamp(1.8rem, 3.5vw, 2.5rem); color: var(--brown); margin-bottom: 0.5rem; }
+    .section-title p { color: var(--text-light); font-size: 1rem; max-width: 550px; margin: 0 auto; line-height: 1.6; }
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    /* WHY US */
+    .why-us { background: var(--brown); }
+    .why-us .section-title h2 { color: var(--gold); }
+    .why-us .section-title p { color: rgba(255,255,255,0.7); }
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.5rem; }
+    .why-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(212,160,23,0.25); border-radius: 16px; padding: 1.8rem 1.5rem; text-align: center; transition: all .3s; }
+    .why-card:hover { background: rgba(212,160,23,0.12); border-color: var(--gold); transform: translateY(-4px); }
+    .why-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .why-card h3 { color: var(--gold); font-size: 1.1rem; margin-bottom: 0.5rem; }
+    .why-card p { color: rgba(255,255,255,0.72); font-size: 0.88rem; line-height: 1.6; }
+
+    /* CAKES GALLERY */
+    .cakes-section { background: var(--cream); }
+    .cakes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .cake-card { background: var(--white); border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(59,31,12,0.10); transition: all .3s; }
+    .cake-card:hover { transform: translateY(-6px); box-shadow: 0 12px 36px rgba(59,31,12,0.18); }
+    .cake-img { width: 100%; height: 200px; object-fit: cover; }
+    .cake-info { padding: 1.2rem 1.3rem; }
+    .cake-info h3 { font-size: 1.15rem; color: var(--brown); margin-bottom: 0.3rem; }
+    .cake-info p { color: var(--text-light); font-size: 0.83rem; margin-bottom: 0.8rem; }
+    .cake-price { display: flex; justify-content: space-between; align-items: center; }
+    .price-slice { font-size: 0.8rem; color: var(--text-light); }
+    .price-whole { font-size: 1.1rem; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+
+    /* CUSTOM ORDERS */
+    .custom-orders { background: var(--cream-dark); }
+    .custom-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; margin-bottom: 2.5rem; }
+    .step { background: var(--white); border-radius: 14px; padding: 1.5rem; text-align: center; position: relative; box-shadow: 0 2px 12px rgba(59,31,12,0.07); }
+    .step-num { width: 36px; height: 36px; background: var(--gold); color: var(--brown); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; margin: 0 auto 0.8rem; }
+    .step h4 { font-size: 1rem; color: var(--brown); margin-bottom: 0.3rem; }
+    .step p { font-size: 0.82rem; color: var(--text-light); }
+    .pricing-table { background: var(--white); border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(59,31,12,0.10); margin-bottom: 2rem; }
+    .pricing-table table { width: 100%; border-collapse: collapse; }
+    .pricing-table th { background: var(--brown); color: var(--gold); padding: 1rem 1.2rem; text-align: left; font-size: 0.85rem; font-weight: 600; }
+    .pricing-table td { padding: 0.9rem 1.2rem; border-bottom: 1px solid var(--cream-dark); font-size: 0.9rem; color: var(--text); }
+    .pricing-table tr:last-child td { border-bottom: none; }
+    .pricing-table tr:hover td { background: var(--cream); }
+    .gluten-note { background: rgba(212,160,23,0.12); border: 1px solid var(--gold); border-radius: 10px; padding: 0.8rem 1.2rem; font-size: 0.85rem; color: var(--brown); margin-bottom: 1.5rem; text-align: center; }
+    .custom-cta { text-align: center; }
+
+    /* FULL MENU */
+    .menu-section { background: var(--cream); }
+    .tab-buttons { display: flex; gap: 0.5rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap; }
+    .tab-btn { background: var(--cream-dark); color: var(--text); border: 2px solid transparent; padding: 0.6rem 1.4rem; border-radius: 25px; cursor: pointer; font-family: 'Inter', sans-serif; font-size: 0.88rem; font-weight: 500; transition: all .2s; }
+    .tab-btn.active { background: var(--brown); color: var(--gold); border-color: var(--brown); }
+    .tab-btn:hover:not(.active) { border-color: var(--brown); }
+    .menu-tab { display: none; }
+    .menu-tab.active { display: block; }
+    .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.8rem; }
+    .menu-item { display: flex; justify-content: space-between; align-items: center; background: var(--white); padding: 0.9rem 1.2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(59,31,12,0.06); }
+    .menu-item-name { font-size: 0.92rem; color: var(--text); font-weight: 500; }
+    .menu-item-price { color: var(--gold); font-weight: 700; font-size: 0.95rem; white-space: nowrap; margin-left: 1rem; }
+
+    /* TESTIMONIALS */
+    .testimonials { background: var(--brown); }
+    .testimonials .section-title h2 { color: var(--gold); }
+    .testimonials .section-title p { color: rgba(255,255,255,0.7); }
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .review-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(212,160,23,0.2); border-radius: 14px; padding: 1.5rem; }
+    .review-stars { color: var(--gold); font-size: 1.1rem; margin-bottom: 0.8rem; }
+    .review-text { color: rgba(255,255,255,0.85); font-size: 0.9rem; line-height: 1.7; margin-bottom: 1rem; font-style: italic; }
+    .reviewer { color: var(--gold); font-size: 0.82rem; font-weight: 600; }
+
+    /* VISIT US */
+    .visit-section { background: var(--cream-dark); }
+    .visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
+    .visit-info h3 { font-size: 1.5rem; color: var(--brown); margin-bottom: 1.2rem; }
+    .info-item { display: flex; gap: 1rem; margin-bottom: 1.2rem; align-items: flex-start; }
+    .info-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
+    .info-content h4 { font-size: 0.85rem; color: var(--text-light); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.2rem; }
+    .info-content p { font-size: 0.95rem; color: var(--text); }
+    .info-content a { color: var(--brown); text-decoration: none; font-weight: 600; }
+    .info-content a:hover { color: var(--gold); }
+    .hours-table { width: 100%; margin-top: 0.5rem; border-collapse: collapse; }
+    .hours-table td { padding: 0.3rem 0; font-size: 0.88rem; color: var(--text); }
+    .hours-table td:first-child { font-weight: 500; width: 100px; }
+    .map-embed { border-radius: 16px; overflow: hidden; height: 340px; box-shadow: 0 4px 20px rgba(59,31,12,0.15); }
+    .map-embed iframe { width: 100%; height: 100%; border: none; }
+    .visit-btns { display: flex; gap: 0.8rem; margin-top: 1.5rem; flex-wrap: wrap; }
+    .btn-brown { background: var(--brown); color: var(--cream); padding: 0.75rem 1.5rem; border-radius: 25px; text-decoration: none; font-weight: 600; font-size: 0.88rem; transition: all .2s; display: inline-flex; align-items: center; gap: 0.4rem; }
+    .btn-brown:hover { background: var(--brown-light); transform: translateY(-2px); }
+    .btn-gold { background: var(--gold); color: var(--brown); padding: 0.75rem 1.5rem; border-radius: 25px; text-decoration: none; font-weight: 700; font-size: 0.88rem; transition: all .2s; display: inline-flex; align-items: center; gap: 0.4rem; }
+    .btn-gold:hover { background: #c4900a; transform: translateY(-2px); }
+
+    /* FOOTER */
+    footer { background: var(--brown); padding: 2.5rem 1.5rem 1.5rem; }
+    .footer-content { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+    .footer-logo { color: var(--gold); font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .footer-tagline { color: rgba(255,255,255,0.6); font-size: 0.85rem; line-height: 1.6; }
+    .footer-col h4 { color: var(--gold); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.8rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 0.5rem; }
+    .footer-col ul li a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 0.85rem; transition: color .2s; }
+    .footer-col ul li a:hover { color: var(--gold); }
+    .footer-bottom { text-align: center; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.4); font-size: 0.8rem; }
+
+    /* FLOATS */
+    .float-buttons { position: fixed; bottom: 1.5rem; right: 1.5rem; display: flex; flex-direction: column; gap: 0.7rem; z-index: 999; }
+    .float-btn { width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.25); transition: all .2s; text-decoration: none; font-size: 1.5rem; }
+    .float-wa { background: #25D366; }
+    .float-call { background: var(--gold); }
+    .float-btn:hover { transform: scale(1.1); }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: var(--brown); padding: 1rem 2rem; gap: 1rem; }
+      .hamburger { display: flex; }
+      .visit-grid { grid-template-columns: 1fr; }
+      .footer-content { grid-template-columns: 1fr; gap: 1.5rem; }
+    }
+    @media (max-width: 480px) {
+      .hero-meta { gap: 0.8rem; }
+      .hero-btns { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">🍰 Honey Special Cake HSR</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#cakes">Cakes</a></li>
+    <li><a href="#custom">Custom Orders</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#visit">Visit Us</a></li>
+  </ul>
+  <a href="https://wa.me/919143143931?text=Hi!%20I%20want%20to%20order%20a%20cake%20from%20Honey%20Special%20Cake%20HSR." class="nav-cta">Order Now 🎂</a>
+  <div class="hamburger" id="hamburger" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-badge">⭐ 4.7 · 654+ Google Reviews · HSR Layout's Favourite Cake Shop</div>
+    <h1>Every Celebration Deserves a <span>Honey Special</span> Cake</h1>
+    <p class="hero-sub">Handcrafted custom cakes, dreamy pastries & savoury surprises — baked with love in the heart of HSR Layout. Open daily till 11:30 PM.</p>
+    <div class="hero-meta">
+      <span>📍 148, 17th Cross Rd, Sector 6, HSR Layout</span>
+      <span>🕙 10 AM – 11:30 PM Daily</span>
+      <span>📞 +91 91431 43931</span>
+    </div>
+    <div class="hero-btns">
+      <a href="https://wa.me/919143143931?text=Hi!%20I%20want%20to%20order%20a%20custom%20cake%20from%20Honey%20Special%20Cake%20HSR." class="btn-primary">🎂 Order Custom Cake</a>
+      <a href="#menu" class="btn-outline">View Menu</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-us">
+  <div class="container">
+    <div class="section-title">
+      <h2>Why Honey Special?</h2>
+      <p>More than just a cake shop — this is where HSR's celebrations come to life.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🎂</div>
+        <h3>Passionate Owner-Baker</h3>
+        <p>Every cake is crafted by the owner himself — a passionate baker who puts love, skill, and creativity into every order.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🌙</div>
+        <h3>Open Till 11:30 PM</h3>
+        <p>Last-minute birthday cake? Late-night dessert craving? We're here when others close. Open every day till 11:30 PM.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🌾</div>
+        <h3>Gluten-Free Options</h3>
+        <p>Everyone deserves a slice of happiness. We offer gluten-free cake options — just ask when placing your order.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🍔</div>
+        <h3>Sweet + Savoury</h3>
+        <p>We don't just bake cakes! Our Italian cheese chicken burger and wraps are a delicious surprise you won't find everywhere.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAKES GALLERY -->
+<section class="cakes-section" id="cakes">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Signature Cakes</h2>
+      <p>From classic flavours to unique creations — each cake is handcrafted to make your moment unforgettable.</p>
+    </div>
+    <div class="cakes-grid">
+      <div class="cake-card">
+        <img class="cake-img" src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&q=80" alt="Red Velvet Cheesecake" loading="lazy" />
+        <div class="cake-info">
+          <h3>Red Velvet Cheesecake</h3>
+          <p>A customer favourite — velvety red layers with rich cream cheese filling. Absolutely irresistible.</p>
+          <div class="cake-price">
+            <span class="price-slice">Slice from ₹420</span>
+            <span class="price-whole">₹1,800 whole</span>
+          </div>
+        </div>
+      </div>
+      <div class="cake-card">
+        <img class="cake-img" src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=600&q=80" alt="Chocolate Truffle Cake" loading="lazy" />
+        <div class="cake-info">
+          <h3>Chocolate Truffle Cake</h3>
+          <p>Dark, rich, intensely chocolatey. A celebration classic that never disappoints.</p>
+          <div class="cake-price">
+            <span class="price-slice">Slice from ₹380</span>
+            <span class="price-whole">₹1,600 whole</span>
+          </div>
+        </div>
+      </div>
+      <div class="cake-card">
+        <img class="cake-img" src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=600&q=80" alt="Butterscotch Cream Cake" loading="lazy" />
+        <div class="cake-info">
+          <h3>Butterscotch Cream Cake</h3>
+          <p>Soft layers of sponge, whipped cream, and caramel-butterscotch drizzle. Pure comfort.</p>
+          <div class="cake-price">
+            <span class="price-slice">Slice from ₹320</span>
+            <span class="price-whole">₹1,400 whole</span>
+          </div>
+        </div>
+      </div>
+      <div class="cake-card">
+        <img class="cake-img" src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=600&q=80" alt="Black Forest Cake" loading="lazy" />
+        <div class="cake-info">
+          <h3>Black Forest</h3>
+          <p>The timeless classic — dark chocolate sponge, whipped cream, and cherries. Beloved by all.</p>
+          <div class="cake-price">
+            <span class="price-slice">Slice from ₹300</span>
+            <span class="price-whole">₹1,350 whole</span>
+          </div>
+        </div>
+      </div>
+      <div class="cake-card">
+        <img class="cake-img" src="https://images.unsplash.com/photo-1487956382158-bb926046304a?w=600&q=80" alt="Strawberry Delight" loading="lazy" />
+        <div class="cake-info">
+          <h3>Strawberry Delight</h3>
+          <p>Fresh strawberry flavoured cream layered over a soft vanilla sponge. Light, bright, and beautiful.</p>
+          <div class="cake-price">
+            <span class="price-slice">Slice from ₹350</span>
+            <span class="price-whole">₹1,500 whole</span>
+          </div>
+        </div>
+      </div>
+      <div class="cake-card">
+        <img class="cake-img" src="https://images.unsplash.com/photo-1562440499-64c9a111f713?w=600&q=80" alt="Honey Almond Cake" loading="lazy" />
+        <div class="cake-info">
+          <h3>Honey Almond</h3>
+          <p>Our signature namesake — a honey-glazed almond sponge with light cream. Delicately special.</p>
+          <div class="cake-price">
+            <span class="price-slice">Slice from ₹390</span>
+            <span class="price-whole">₹1,700 whole</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOM ORDERS -->
+<section class="custom-orders" id="custom">
+  <div class="container">
+    <div class="section-title">
+      <h2>Custom Cake Orders</h2>
+      <p>Birthday. Wedding. Anniversary. Baby shower. Corporate. Whatever the occasion — we'll bake it perfectly.</p>
+    </div>
+    <div class="custom-steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Choose Your Size</h4>
+        <p>From ½ kg for intimate moments to 3+ kg for grand celebrations</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>Pick Your Theme</h4>
+        <p>Birthday, wedding, floral, cartoon, corporate — any design you imagine</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>Share the Details</h4>
+        <p>Name, message, reference photos — tell us your vision</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h4>WhatsApp Us</h4>
+        <p>Place your order 24 hours in advance for best results</p>
+      </div>
+    </div>
+    <div class="pricing-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Cake Size</th>
+            <th>Serves</th>
+            <th>Starting Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>½ kg</td><td>4–6 people</td><td>from ₹700</td></tr>
+          <tr><td>1 kg</td><td>8–12 people</td><td>from ₹1,200</td></tr>
+          <tr><td>1.5 kg</td><td>14–18 people</td><td>from ₹1,700</td></tr>
+          <tr><td>2 kg</td><td>20–25 people</td><td>from ₹2,200</td></tr>
+          <tr><td>3 kg+</td><td>30+ people</td><td>from ₹3,200</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="gluten-note">🌾 Gluten-free custom cakes available on request. Please mention when ordering.</p>
+    <div class="custom-cta">
+      <a href="https://wa.me/919143143931?text=Hi!%20I%20want%20to%20order%20a%20custom%20cake.%20Can%20you%20help%20me?" class="btn-primary" style="font-size:1rem; padding: 1rem 2.5rem;">📱 Order via WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- FULL MENU -->
+<section class="menu-section" id="menu">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Full Menu</h2>
+      <p>Cakes, pastries, savoury bites and drinks — all made with care, all worth every rupee.</p>
+    </div>
+    <div class="tab-buttons">
+      <button class="tab-btn active" onclick="showTab('tab-cakes', this)">🎂 Cakes</button>
+      <button class="tab-btn" onclick="showTab('tab-pastries', this)">🧁 Pastries & Bites</button>
+      <button class="tab-btn" onclick="showTab('tab-savoury', this)">🍔 Savoury</button>
+      <button class="tab-btn" onclick="showTab('tab-drinks', this)">☕ Drinks</button>
+    </div>
+
+    <div class="menu-tab active" id="tab-cakes">
+      <div class="menu-grid">
+        <div class="menu-item"><span class="menu-item-name">Red Velvet Cheesecake (slice)</span><span class="menu-item-price">₹420</span></div>
+        <div class="menu-item"><span class="menu-item-name">Chocolate Truffle Cake (slice)</span><span class="menu-item-price">₹380</span></div>
+        <div class="menu-item"><span class="menu-item-name">Butterscotch Cream Cake (slice)</span><span class="menu-item-price">₹320</span></div>
+        <div class="menu-item"><span class="menu-item-name">Black Forest (slice)</span><span class="menu-item-price">₹300</span></div>
+        <div class="menu-item"><span class="menu-item-name">Strawberry Delight (slice)</span><span class="menu-item-price">₹350</span></div>
+        <div class="menu-item"><span class="menu-item-name">Honey Almond Cake (slice)</span><span class="menu-item-price">₹390</span></div>
+        <div class="menu-item"><span class="menu-item-name">NY Baked Cheesecake (slice)</span><span class="menu-item-price">₹180</span></div>
+        <div class="menu-item"><span class="menu-item-name">Custom Cake (½ kg)</span><span class="menu-item-price">from ₹700</span></div>
+        <div class="menu-item"><span class="menu-item-name">Custom Cake (1 kg)</span><span class="menu-item-price">from ₹1,200</span></div>
+        <div class="menu-item"><span class="menu-item-name">Custom Cake (2 kg)</span><span class="menu-item-price">from ₹2,200</span></div>
+      </div>
+    </div>
+
+    <div class="menu-tab" id="tab-pastries">
+      <div class="menu-grid">
+        <div class="menu-item"><span class="menu-item-name">Red Velvet Cupcake</span><span class="menu-item-price">₹120</span></div>
+        <div class="menu-item"><span class="menu-item-name">Chocolate Brownie</span><span class="menu-item-price">₹90</span></div>
+        <div class="menu-item"><span class="menu-item-name">Cinnamon Roll</span><span class="menu-item-price">₹100</span></div>
+        <div class="menu-item"><span class="menu-item-name">Chocolate Eclair</span><span class="menu-item-price">₹80</span></div>
+        <div class="menu-item"><span class="menu-item-name">Macarons (2-piece box)</span><span class="menu-item-price">₹150</span></div>
+        <div class="menu-item"><span class="menu-item-name">NY Baked Cheesecake Slice</span><span class="menu-item-price">₹180</span></div>
+        <div class="menu-item"><span class="menu-item-name">Fruit Tart</span><span class="menu-item-price">₹130</span></div>
+        <div class="menu-item"><span class="menu-item-name">Choco-Walnut Cookie</span><span class="menu-item-price">₹70</span></div>
+      </div>
+    </div>
+
+    <div class="menu-tab" id="tab-savoury">
+      <div class="menu-grid">
+        <div class="menu-item"><span class="menu-item-name">Italian Cheese Chicken Burger</span><span class="menu-item-price">₹220</span></div>
+        <div class="menu-item"><span class="menu-item-name">Chicken Wrap</span><span class="menu-item-price">₹180</span></div>
+        <div class="menu-item"><span class="menu-item-name">Veggie Grilled Sandwich</span><span class="menu-item-price">₹140</span></div>
+      </div>
+    </div>
+
+    <div class="menu-tab" id="tab-drinks">
+      <div class="menu-grid">
+        <div class="menu-item"><span class="menu-item-name">Cold Coffee</span><span class="menu-item-price">₹120</span></div>
+        <div class="menu-item"><span class="menu-item-name">Iced Latte</span><span class="menu-item-price">₹130</span></div>
+        <div class="menu-item"><span class="menu-item-name">Hot Chocolate</span><span class="menu-item-price">₹110</span></div>
+        <div class="menu-item"><span class="menu-item-name">Fresh Lime Soda</span><span class="menu-item-price">₹80</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="container">
+    <div class="section-title">
+      <h2>What Our Customers Say</h2>
+      <p>4.7★ on Google Maps with 654+ reviews. Here's what HSR Layout thinks of us.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"The Red Velvet Cheesecake from here is something else — rich, creamy, and just perfectly balanced. I've been coming here for over a year and it never disappoints. Best cake shop in HSR!"</p>
+        <div class="reviewer">— Priya M., HSR Layout</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Ordered a custom birthday cake with gluten-free sponge for my son. The owner went above and beyond — the design was exactly as requested and it tasted absolutely wonderful. Highly recommend!"</p>
+        <div class="reviewer">— Ranjit S., Koramangala</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Open till 11:30 PM is a lifesaver. I've walked in at 10 PM for a last-minute birthday cake and they delivered perfectly. The Italian cheese burger is surprisingly amazing too — what a combo!"</p>
+        <div class="reviewer">— Deepa K., BTM Layout</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★☆</div>
+        <p class="review-text">"Such a cozy little spot! The staff is super warm and helpful. The cakes are fresh, presentation is beautiful, and pricing is very reasonable for the quality. My go-to for all celebrations now."</p>
+        <div class="reviewer">— Arnav T., Jayanagar</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT US -->
+<section class="visit-section" id="visit">
+  <div class="container">
+    <div class="section-title">
+      <h2>Find Us</h2>
+      <p>Right in the heart of HSR Layout Sector 6 — easy to find, impossible to forget.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-info">
+        <h3>Visit or Order</h3>
+        <div class="info-item">
+          <span class="info-icon">📍</span>
+          <div class="info-content">
+            <h4>Address</h4>
+            <p>148, 17th Cross Rd, Sector 6, HSR Layout,<br>Bengaluru, Karnataka 560102</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">📞</span>
+          <div class="info-content">
+            <h4>Phone</h4>
+            <p><a href="tel:+919143143931">+91 91431 43931</a></p>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">🕙</span>
+          <div class="info-content">
+            <h4>Hours</h4>
+            <table class="hours-table">
+              <tr><td>Mon – Sun</td><td>10:00 AM – 11:30 PM</td></tr>
+            </table>
+            <p style="font-size:0.82rem; color: var(--gold); margin-top: 0.3rem;">✓ Open 7 days a week · Including holidays</p>
+          </div>
+        </div>
+        <div class="visit-btns">
+          <a href="https://maps.app.goo.gl/Tq83Ked7YxxzHsZx6" class="btn-brown" target="_blank">🗺️ Get Directions</a>
+          <a href="tel:+919143143931" class="btn-gold">📞 Call Now</a>
+        </div>
+      </div>
+      <div class="map-embed">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.4097!2d77.63538814!3d12.91259200!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae156c4956fc3d%3A0x83b73ddd1839aff9!2sHoney%20Special%20Cake%20HSR!5e0!3m2!1sen!2sin!4v1"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+    <div>
+      <div class="footer-logo">🍰 Honey Special Cake HSR</div>
+      <p class="footer-tagline">Baked with love in HSR Layout, Bengaluru.<br>Every celebration, every craving — we're here for it all.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#cakes">Signature Cakes</a></li>
+        <li><a href="#custom">Custom Orders</a></li>
+        <li><a href="#menu">Full Menu</a></li>
+        <li><a href="#visit">Visit Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+919143143931">+91 91431 43931</a></li>
+        <li><a href="https://wa.me/919143143931">WhatsApp Order</a></li>
+        <li><a href="https://maps.app.goo.gl/Tq83Ked7YxxzHsZx6">Get Directions</a></li>
+        <li>Open till 11:30 PM daily</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Honey Special Cake HSR · 148, 17th Cross Rd, Sector 6, HSR Layout, Bengaluru 560102</p>
+    <p style="margin-top:0.4rem; color: rgba(255,255,255,0.3);">Digital presence by Nextahalli — helping Bengaluru's best local businesses shine online.</p>
+  </div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<div class="float-buttons">
+  <a href="https://wa.me/919143143931?text=Hi!%20I%20want%20to%20order%20a%20cake%20from%20Honey%20Special%20Cake%20HSR." class="float-btn float-wa" title="Order on WhatsApp">💬</a>
+  <a href="tel:+919143143931" class="float-btn float-call" title="Call Now">📞</a>
+</div>
+
+<script>
+  function toggleNav() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+  function showTab(tabId, btn) {
+    document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(tabId).classList.add('active');
+    btn.classList.add('active');
+  }
+  // Smooth nav background
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar');
+    nav.style.boxShadow = window.scrollY > 50 ? '0 4px 20px rgba(0,0,0,0.3)' : 'none';
+  });
+</script>
+</body>
+</html>
