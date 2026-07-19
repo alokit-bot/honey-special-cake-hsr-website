@@ -43771,6 +43771,7 @@ function App() {
     "x-id": "App_7_4",
     "x-dynamic": "false",
     children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.BrowserRouter, {
+      basename: "/honey-special-cake-hsr-website",
       "x-file-name": "App",
       "x-line-number": "8",
       "x-column": "6",
